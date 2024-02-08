@@ -1,5 +1,5 @@
-import Recipe from "./recipe";
-import RecipeBook from "./recipeBook";
+import Recipe from "./recipe.js";
+import RecipeBook from "./recipeBook.js";
 
 const recipe1 = new Recipe(
   'Швидка вечеря',
