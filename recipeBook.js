@@ -74,12 +74,12 @@ class RecipeBook {
           return lowerCaseRecipeIngredients.includes(ingredient);
         })
       );
-      return `Ваші рецепти по за інгрідієнтами => ${
+      return `Ваші рецепти за інгрідієнтами => ${
         filteredRecipes.length > 0
           ? filteredRecipes
               .map((recipe) => `"${recipe.recipeTitle}"`)
               .join(', ')
-          : null
+          : `не знайдені`
       }`;
     } else {
       return null;

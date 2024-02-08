@@ -54,4 +54,4 @@ traditionalRecipe.writeDownRecipe(
 traditionalRecipe.recipes;
 console.log(traditionalRecipe.getRecipeByTime(60));
 // console.log(traditionalRecipe.getRecipeByTime('а'));
-console.log(traditionalRecipe.getRecipeByIngredients('картопля'));
+console.log(traditionalRecipe.getRecipeByIngredients('картопля', 'морква', 'ffff'));
