@@ -60,7 +60,8 @@ console.log(
 );
 
 const ingredientsRecipe = traditionalRecipe.getRecipeByIngredients(
-  'картопля'  
+  'картопля', 
+  'морква'
 );
 console.log(
   `Ваші рецепти: ${ingredientsRecipe
