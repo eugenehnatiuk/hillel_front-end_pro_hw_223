@@ -26,13 +26,14 @@ class RecipeBook {
   }
 
   getRecipeByTime(timeValue) {
-    if (typeof timeValue === 'number' && !isNaN(timeValue)) {
-      const filteredRecipes = this.#recipesList.filter(
-        (recipe) => recipe.cookingTime <= timeValue
-      );
-      return filteredRecipes.length > 0 ? filteredRecipes : 'Рецепти відсутні';
+    if (typeof timeValue !== 'number' && isNaN(timeValue)) {
+      return 'Присутній невалідний запис. Очікує число';
     }
-    return 'Присутній невалідний запис. Очікує число';
+
+    const filteredRecipes = this.#recipesList.filter(
+      (recipe) => recipe.cookingTime <= timeValue
+    );
+    return filteredRecipes.length > 0 ? filteredRecipes : 'Рецепти відсутні';
   }
 
   getRecipeByIngredients(...ingredients) {
