@@ -54,10 +54,16 @@ traditionalRecipe.writeDownRecipe(
 
 traditionalRecipe.recipes;
 
-console.log(traditionalRecipe.getRecipeByTime(60));
-
-console.log(traditionalRecipe.getRecipeByTime('а'));
-
+const timeRecipe = traditionalRecipe.getRecipeByTime(60);
 console.log(
-  traditionalRecipe.getRecipeByIngredients('картопля', 'Куряча грудка')
+  `Ваші рецепти: ${timeRecipe.map((el) => `"${el.recipeTitle}"`).join(', ')}`
+);
+
+const ingredientsRecipe = traditionalRecipe.getRecipeByIngredients(
+  'картопля'  
+);
+console.log(
+  `Ваші рецепти: ${ingredientsRecipe
+    .map((el) => `"${el.recipeTitle}"`)
+    .join(', ')}`
 );
