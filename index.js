@@ -1,5 +1,5 @@
-import Recipe from "./recipe.js";
-import RecipeBook from "./recipeBook.js";
+import Recipe from './recipe.js';
+import RecipeBook from './recipeBook.js';
 
 const recipe1 = new Recipe(
   'Швидка вечеря',
@@ -44,14 +44,20 @@ const traditionalRecipe = new RecipeBook();
 
 traditionalRecipe.writeDownRecipe(
   recipe1,
+  1,
   recipe2,
+  'inv',
   recipe3,
-  'invalid',
   recipe4,
   recipe5
 );
 
 traditionalRecipe.recipes;
+
 console.log(traditionalRecipe.getRecipeByTime(60));
-// console.log(traditionalRecipe.getRecipeByTime('а'));
-console.log(traditionalRecipe.getRecipeByIngredients('картопля', 'морква', 'ffff'));
+
+console.log(traditionalRecipe.getRecipeByTime('а'));
+
+console.log(
+  traditionalRecipe.getRecipeByIngredients('картопля', 'Куряча грудка')
+);
