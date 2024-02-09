@@ -6,12 +6,12 @@ class RecipeBook {
 
   get recipes() {
     if (this.#recipesList.length === 0) {
-      return 'No Recipes yet';
+      return 'Ще немає рецептів. Додайте рецепти.';
     } else {
       return `${
         this.#numberOfRecords < 2
-          ? 'Існує один рецепт:'
-          : `Існує ${this.#numberOfRecords} рецепти:`
+          ? 'У вас один рецепт:'
+          : `Кількість рецептів - ${this.#numberOfRecords}:`
       } ${this.#recipesList
         .map((recipe) => `"${recipe.recipeTitle}"`)
         .join(', ')}`;

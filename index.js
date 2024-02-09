@@ -46,9 +46,9 @@ traditionalRecipe.writeDownRecipe(
   recipe1,
   recipe2,
   recipe3,
-  // 'invalid',
+  'invalid',
   recipe4,
-  // recipe5
+  recipe5
 );
 
 traditionalRecipe.recipes;
