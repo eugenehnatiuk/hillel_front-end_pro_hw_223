@@ -33,7 +33,7 @@ class RecipeBook {
     const filteredRecipes = this.#recipesList.filter(
       (recipe) => recipe.cookingTime <= timeValue
     );
-    return filteredRecipes.length > 0 ? filteredRecipes : 'Рецепти відсутні';
+    return filteredRecipes.length > 0 ? filteredRecipes : null;
   }
 
   getRecipeByIngredients(...ingredients) {

@@ -56,7 +56,9 @@ traditionalRecipe.recipes;
 
 const timeRecipe = traditionalRecipe.getRecipeByTime(60);
 console.log(
-  `Ваші рецепти: ${timeRecipe.map((el) => `"${el.recipeTitle}"`).join(', ')}`
+  `Ваші рецепти: ${timeRecipe ? timeRecipe
+    .map((el) => `"${el.recipeTitle}"`)
+    .join(', ') : 'рецептів немає'}`
 );
 
 const ingredientsRecipe = traditionalRecipe.getRecipeByIngredients(
@@ -64,7 +66,10 @@ const ingredientsRecipe = traditionalRecipe.getRecipeByIngredients(
   'морква'
 );
 console.log(
-  `Ваші рецепти: ${ingredientsRecipe
-    .map((el) => `"${el.recipeTitle}"`)
-    .join(', ')}`
+  `Ваші рецепти: ${
+    ingredientsRecipe
+      ? ingredientsRecipe.map((el) => `"${el.recipeTitle}"`).join(', ')
+      : 'рецептів немає'
+  }`
 );
+
